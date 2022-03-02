@@ -26,6 +26,23 @@ dependencies {
 
 ## Examples:
 #### Stopwatch:
+```Kotlin
+val stopwatch: Stopwatch = buildStopwatch {
+    // Set the initial format
+    startFormat("MM:SS")
+
+    // Set the tick listener for displaying time
+    onTick { time -> textViewStopwatch.setText(time) }
+
+    // When time is equal to one hour, change format to "HH:MM:SS"
+    changeFormatWhen(1, TimeUnit.HOURS, "HH:MM:SS")
+}
+      
+// Start the stopwatch
+stopwatch.start()
+...
+```
+
 ```java
 Stopwatch stopwatch = new StopwatchBuilder()
       // Set the initial format
