@@ -11,7 +11,6 @@ Make sure you have jcenter added in your top-level build.gradle file:
 allprojects {
   repositories {
     google()
-    jcenter() // Make sure you have this line
   }
 }
 ```
@@ -20,7 +19,7 @@ allprojects {
 And then, add following lines in your module-level build.gradle file:
 ```groovy
 dependencies {
-      implementation 'com.arsvechkarev:timerx:2.3.2'
+    implementation 'com.github.Paget96:TimerX:3.0.1'
 }
 ```
 
