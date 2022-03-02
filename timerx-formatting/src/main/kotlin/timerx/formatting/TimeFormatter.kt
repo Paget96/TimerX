@@ -102,35 +102,35 @@ package timerx.formatting
  * @author Arseniy Svechkarev
  */
 interface TimeFormatter {
-  
-  /**
-   * Returns delay for timer/stopwatch based on what the format is. If [useExactDelay] is set to
-   * true, then delay should be calculated **exactly** according to format. For example, if format
-   * is "MM:SS", then delay should be 1 seconds. If [useExactDelay] is set to false then delay
-   * might be less be 1 seconds, like 100 or milliseconds
-   */
-  fun getWaitingDelay(useExactDelay: Boolean): Long
-  
-  /**
-   * Returns the format of the formatter
-   */
-  val format: String
-  
-  /**
-   * Formats input milliseconds according to the format
-   */
-  fun format(millis: Long): CharSequence
-  
-  companion object {
-  
+
     /**
-     * Helper method for formatting time
-     *
-     * @param format Format to format time with
-     * @param millis Time in milliseconds
+     * Returns delay for timer/stopwatch based on what the format is. If [useExactDelay] is set to
+     * true, then delay should be calculated **exactly** according to format. For example, if format
+     * is "MM:SS", then delay should be 1 seconds. If [useExactDelay] is set to false then delay
+     * might be less be 1 seconds, like 100 or milliseconds
      */
-    fun format(format: String, millis: Long): CharSequence {
-      return StringBuilderTimeFormatter(AnalyzerImpl.analyze(format)).format(millis)
+    fun getWaitingDelay(useExactDelay: Boolean): Long
+
+    /**
+     * Returns the format of the formatter
+     */
+    val format: String
+
+    /**
+     * Formats input milliseconds according to the format
+     */
+    fun format(millis: Long): CharSequence
+
+    companion object {
+
+        /**
+         * Helper method for formatting time
+         *
+         * @param format Format to format time with
+         * @param millis Time in milliseconds
+         */
+        fun format(format: String, millis: Long): CharSequence {
+            return StringBuilderTimeFormatter(AnalyzerImpl.analyze(format)).format(millis)
+        }
     }
-  }
 }

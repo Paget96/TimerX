@@ -5,11 +5,4 @@ ext {
   application = [
       annotations: "androidx.annotation:annotation:$annotationsVersion"
   ]
-
-
-  junitVersion = '4.12'
-
-  test = [
-      junit: "junit:junit:$junitVersion"
-  ]
 }

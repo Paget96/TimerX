@@ -5,18 +5,18 @@ package timerx.formatting
  * and stripped version of format without escape symbols
  */
 interface Semantic {
-  
-  val hoursPosition: Position
-  val minutesPosition: Position
-  val secondsPosition: Position
-  val rMillisPosition: Position
-  val format: String
-  val strippedFormat: String
-  val smallestAvailableUnit: TimeUnitType
-  val largestAvailableUnit: TimeUnitType
-  val largestAvailableUnitLength: Int
-  
-  fun has(unitType: TimeUnitType): Boolean
-  fun hasOnlyRMillis(): Boolean
-  fun getPositionOf(unitType: TimeUnitType): Position
+
+    val hoursPosition: Position
+    val minutesPosition: Position
+    val secondsPosition: Position
+    val rMillisPosition: Position
+    val format: String
+    val strippedFormat: String
+    val smallestAvailableUnit: TimeUnitType
+    val largestAvailableUnit: TimeUnitType
+    val largestAvailableUnitLength: Int
+
+    fun has(unitType: TimeUnitType): Boolean
+    fun hasOnlyRMillis(): Boolean
+    fun getPositionOf(unitType: TimeUnitType): Position
 }
